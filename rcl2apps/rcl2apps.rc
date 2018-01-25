@@ -1,0 +1,36 @@
+#include <winver.h>
+#include "rcl2apps.hpp"
+
+1 VERSIONINFO
+FILEVERSION MAJOR_VER,MINOR_VER,0,BUILD
+PRODUCTVERSION MAJOR_VER,MINOR_VER,0,BUILD
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_DLL
+FILESUBTYPE VFT2_UNKNOWN
+
+#ifdef _DEBUG
+FILEFLAGS VS_FF_PRERELEASE|VS_FF_DEBUG
+#else
+FILEFLAGS VS_FF_PRERELEASE
+#endif
+
+{
+ BLOCK L"StringFileInfo"
+ {
+  BLOCK L"000004E4"
+  {
+   VALUE "CompanyName", "WARPED World"
+   VALUE "LegalCopyright", "Copyright (C) 2003 WARP ItSelf, 2013 Alexey Samlyukov"
+   VALUE L"FileDescription",L"rcl2apps for Far Manager " FARVER
+   VALUE L"FileVersion",ALLSTR
+   VALUE L"ProductVersion",ALLSTR
+   VALUE L"InternalName",L"rcl2apps"
+   VALUE L"OriginalFilename",L"rcl2apps.dll"
+   VALUE L"ProductName",PRODUCTNAME
+  }
+ }
+ BLOCK L"VarFileInfo"
+ {
+   VALUE L"Translation",0,0x4e4
+ }
+}
